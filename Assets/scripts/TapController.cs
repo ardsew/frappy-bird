@@ -12,7 +12,9 @@ public class TapController : MonoBehaviour {
     public float tapForce = 10, tiltSmooth = 5;
     public Vector3 startPos;
 
-    new Rigidbody2D rigidbody;
+    public AudioSource tapAudio, scoreAudio, dieAudio;
+
+    Rigidbody2D rigidbody;
     Quaternion downRotation, forwardRotation;
 
     GameManager game;
@@ -51,6 +53,7 @@ public class TapController : MonoBehaviour {
 
         // equiv. to Left Click or a Tap on Android
         if(Input.GetMouseButtonDown(0)) {
+            tapAudio.Play();
             transform.rotation = forwardRotation;
             rigidbody.velocity = Vector3.zero;
             // can also later try ForceMode2D.Impulse
@@ -66,6 +69,7 @@ public class TapController : MonoBehaviour {
         if(col.gameObject.tag == "ScoreZone") {
             // register a score, play a sound
             OnPlayerScored(); // event sent to GAmeManager
+            scoreAudio.Play();
         }
 
         if(col.gameObject.tag == "DeadZone") {
@@ -74,6 +78,7 @@ public class TapController : MonoBehaviour {
             rigidbody.simulated = false;
             // register a dead event, and play a sound
             OnPlayerDied(); // same as above;
+            dieAudio.Play();
         }
     }
 }
