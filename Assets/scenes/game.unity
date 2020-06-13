@@ -194,7 +194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.35125002, y: 0.20236908}
   m_AnchorMax: {x: 0.6425001, y: 0.22629182}
-  m_AnchoredPosition: {x: -8.3, y: 188.3}
+  m_AnchoredPosition: {x: -8.25, y: 188.5}
   m_SizeDelta: {x: 184.35342, y: 123.35809}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129233324
@@ -230,11 +230,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: cd51dd468b3f772498b3b21bee84af0a, type: 3}
-    m_FontSize: 10
-    m_FontStyle: 2
+    m_FontSize: 12
+    m_FontStyle: 3
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 48
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -243,7 +243,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Created by Andrew K.,
 
-    With help from Freepik and Those Icons at flaticon.com'
+    With help from Freepik and Those Icons at flaticon.com
+    and script references from RenaissanceCoders.'
 --- !u!222 &129233326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2168,8 +2169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49178e5838cd80d4dbc8509b10dafa26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapForce: 195
-  tiltSmooth: 5
+  tapForce: 230
+  tiltSmooth: 10
   startPos: {x: -1.65, y: 0.9, z: 0}
   tapAudio: {fileID: 280291754}
   scoreAudio: {fileID: 338909444}
