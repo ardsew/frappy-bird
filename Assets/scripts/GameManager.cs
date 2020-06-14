@@ -32,7 +32,15 @@ public class GameManager : MonoBehaviour
     }
 
     void Awake() {
-        Instance = this;
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void OnEnable() {
@@ -96,9 +104,9 @@ public class GameManager : MonoBehaviour
 
     public void ConfirmGameOver() {
         // works when replay button is hit
-        OnGameOverConfirmed(); // event sent to TapController
-        scoreText.text = "0";
         SetPageState(PageState.Start);
+        scoreText.text = "0";
+        OnGameOverConfirmed(); // event sent to TapController
     }
 
     public void StartGame() {

@@ -8,8 +8,9 @@ public class HighscoreText : MonoBehaviour
 {
     Text highscore;
 
-// void onEnable() {}
-    void Start() {
+// void OnEnable() {}
+// void Start() {
+    void OnEnable() {
         highscore = GetComponent<Text>();
         highscore.text = "High Score: " +  PlayerPrefs.GetInt("HighScore").ToString();
     }
