@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public delegate void GameDelegate();
+    // two below need static
     public static event GameDelegate OnGameStarted, OnGameOverConfirmed;
 
     public static GameManager Instance;
